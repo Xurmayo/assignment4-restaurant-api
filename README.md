@@ -28,13 +28,14 @@ config/
 app.js
 server.js
 
-bash ``` 
+``` 
 
 - **models/** – Mongoose schemas
 - **controllers/** – Business logic
 - **routes/** – API endpoints
 - **middleware/** – Authentication & authorization
 - **config/** – Database connection
+
 ```
 ---
 
@@ -84,7 +85,7 @@ CRUD Operations:
 - JWT is used for authentication
 - Public access: GET routes
 - Protected access: POST, PUT, DELETE
-- Only users with role `admin` can modify data
+- Only users with role admin can modify data
 
 ---
 
@@ -111,29 +112,23 @@ CRUD Operations:
 ## How to Run the Project
 
 1. Install dependencies:
-```bash
+```
 npm install
-Create .env file:
-
-ini
-
+```
+Create .env:
+```
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/restaurant-api
 JWT_SECRET=your_secret_key
-Start server:
+```
 
+Start server
 
+```
 npm run dev
-Postman Testing
-A Postman collection is included showing:
 
-Successful admin requests
-
-Failed user requests (RBAC proof)
-
-Public read access
-
-Author
+```
+Author:
 Assignment 4 – Web / Backend Development - Amangeldi Alisher
 
 
