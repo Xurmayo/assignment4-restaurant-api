@@ -1,4 +1,4 @@
-# Assignment 4 – Restaurant API
+## Assignment 4 – Restaurant API
 
 ## Project Description
 This project is a RESTful Restaurant API built with Node.js, Express, and MongoDB.  
@@ -39,7 +39,7 @@ server.js
 
 ## Objects in the System
 
-### 1. User
+## 1. User
 Fields:
 - email
 - password (hashed)
@@ -49,7 +49,7 @@ Used for authentication and authorization.
 
 ---
 
-### 2. Category (Secondary Object)
+## 2. Category (Secondary Object)
 Represents menu categories.
 
 CRUD Operations:
@@ -60,7 +60,7 @@ CRUD Operations:
 
 ---
 
-### 3. MenuItem (Primary Object)
+## 3. MenuItem (Primary Object)
 Represents food items in the menu.
 
 Fields:
@@ -93,13 +93,13 @@ CRUD Operations:
 - POST `/api/auth/register`
 - POST `/api/auth/login`
 
-### Categories
+## Categories
 - GET `/api/categories`
 - POST `/api/categories` (admin)
 - PUT `/api/categories/:id` (admin)
 - DELETE `/api/categories/:id` (admin)
 
-### Menu Items
+## Menu Items
 - GET `/api/menu`
 - POST `/api/menu` (admin)
 - PUT `/api/menu/:id` (admin)
@@ -107,7 +107,7 @@ CRUD Operations:
 
 ---
 
-##How to Run the Project
+## How to Run the Project?
 
 1. Install dependencies:
 ```
