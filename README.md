@@ -30,11 +30,11 @@ server.js
 
 ``` 
 
-- **models/** – Mongoose schemas
-- **controllers/** – Business logic
-- **routes/** – API endpoints
-- **middleware/** – Authentication & authorization
-- **config/** – Database connection
+- models/ – Mongoose schemas
+- controllers/ – Business logic
+- routes/ – API endpoints
+- middleware/ – Authentication & authorization
+- config/ – Database connection
 
 ```
 ---
