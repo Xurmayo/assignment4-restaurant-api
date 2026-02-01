@@ -1,0 +1,418 @@
+{
+  "info": {
+    "_postman_id": "cd5a946d-2a93-46ab-bcff-2f1f402bf5d5",
+    "name": "Assignment 4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50801381",
+    "_collection_link": "https://go.postman.co/collection/50801381-cd5a946d-2a93-46ab-bcff-2f1f402bf5d5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"admin@restaurant.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"user@restaurant.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"user\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "category creation",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Desserts\",\r\n  \"description\": \"Sweet dishes\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "category read",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update description",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"description\": \"Updated description\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/categories/697f59351386a83b6ddff0ca",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "categories",
+            "697f59351386a83b6ddff0ca"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/categories/697f59351386a83b6ddff0ca",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "categories",
+            "697f59351386a83b6ddff0ca"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "category create user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y2MTVlNDI3MjRlZWNlMjgzMDhmNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY5OTU1Njc4LCJleHAiOjE3NzAwNDIwNzh9.gHArzb5cFHf8AFx2NYeofgsWrCJb1M3nLCOe9SmlOIc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add item",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Chocolate Cake\",\r\n  \"price\": 7.99,\r\n  \"description\": \"Rich chocolate dessert\",\r\n  \"category\": \"697f606842724eece28308e9\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/menu",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "menu"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "READ Menu Items",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/menu",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "menu"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UPDATE Menu Item",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"price\": 8.99\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/menu/697f604d42724eece28308e4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "menu",
+            "697f604d42724eece28308e4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE Menu Item",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y1NmI4NTE4ZTUyOThjODQ4YWRhYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2OTk1Mjk1MiwiZXhwIjoxNzcwMDM5MzUyfQ.1wwJP7Mh1PMk5QC9ok75-snlqqH8Pxf63RwimMXXxHw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/menu/697f604d42724eece28308e4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "menu",
+            "697f604d42724eece28308e4"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE Menu Item (USER)",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Y2MTVlNDI3MjRlZWNlMjgzMDhmNCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY5OTU1Njc4LCJleHAiOjE3NzAwNDIwNzh9.gHArzb5cFHf8AFx2NYeofgsWrCJb1M3nLCOe9SmlOIc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/menu",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "menu"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
