@@ -3,9 +3,7 @@
 ## Project Description
 This project is a RESTful Restaurant API built with Node.js, Express, and MongoDB.  
 It follows the MVC (Model–View–Controller) architecture and implements authentication,
-authorization, and Role-Based Access Control (RBAC) using JWT and bcrypt.
-
-The API allows managing restaurant menu categories and menu items with secure access rules.
+authorization, and Role-Based Access Control (RBAC) using JWT and bcrypt.The API allows managing restaurant menu categories and menu items with secure access rules.
 
 ---
 
@@ -109,7 +107,7 @@ CRUD Operations:
 
 ---
 
-## How to Run the Project
+#How to Run the Project
 
 1. Install dependencies:
 ```
@@ -130,6 +128,3 @@ npm run dev
 ```
 Author:
 Assignment 4 – Web / Backend Development - Amangeldi Alisher
-
-
-
